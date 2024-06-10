@@ -8,7 +8,7 @@ import socketserver
 if sys.argv[1:]:
   port = int(sys.argv[1])
 else:
-  port = 80   # Porta predefinita se non è stata specificata una porta
+  port = 8080   # Porta predefinita se non è stata specificata una porta
 
 # Creazione di un server TCP multithreading che utilizza SimpleHTTPRequestHandler per gestire le richieste HTTP
 server = socketserver.ThreadingTCPServer(('',port), http.server.SimpleHTTPRequestHandler )
